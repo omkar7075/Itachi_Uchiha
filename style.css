@@ -1,0 +1,150 @@
+
+body{
+	min-height: 100vh;
+	display: grid;
+	background-image: url(img/3.gif);
+	background-size: 100% ;
+	overflow: hidden;
+
+}
+
+.slider{
+	height: 250px;
+	position: relative;
+	width: 90%;
+	display: grid;
+	align-items: center;
+	overflow: hidden;
+	margin-top: 0px;
+	margin: auto;
+}
+
+.slider1{
+	height: 250px;
+	position: relative;
+	width: 90%;
+	display: grid;
+	align-items: center;
+	overflow: hidden;
+	margin-bottom: -50px;
+	margin: auto;
+}
+
+.slide-track{
+	display: flex;
+	width: calc(250px * 18);
+	animation: scroll1 40s linear infinite;
+}
+
+.slide-track1{
+	display: flex;
+	width: calc(250px * 18);
+	animation: scroll 40s linear infinite;
+}
+
+
+.slide-track:hover{
+	animation-play-state: paused;
+}
+ .slide-track1:hover{
+	animation-play-state: paused;
+}
+
+@keyframes scroll1{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(calc(-250px * 9));
+	}
+}
+
+@keyframes scroll{
+	0%{
+		transform: translateX(calc(-250px * 9));
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+.slide{
+	height: 200px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	perspective: 100px;
+	margin: auto;
+}
+
+.slide1{
+	height: 200px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	perspective: 100px;
+	margin: auto;
+}
+
+img{
+	
+	transition: transform 1s;
+	height: 100px;
+	width: 200px;
+}
+
+img:hover{
+	transform: translateZ(30px);
+}
+
+
+
+/*
+
+.slider::before,
+.slider::after{
+	background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 15%;
+	z-index: 2;
+
+}
+
+.slider1::before,
+.slider1::after{
+	background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 15%;
+	z-index: 2;
+
+}
+
+.slider::before{
+	left: 0;
+	top: 0;
+}
+.slider1::before{
+	left: 0;
+	top: 0;
+}
+
+
+.slider::after{
+	right: 0;
+	top: 0;
+	transform: rotateZ(100deg);
+}
+
+.slider1::after{
+	right: 0;
+	top: 0;
+	transform: rotateZ(100deg);
+}
+
+*/
